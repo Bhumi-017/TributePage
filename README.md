@@ -8,10 +8,13 @@ This project is a simple front-end webpage created using HTML and CSS, designed 
 Features
 -------------------
 Structured Content: The page is divided into sections that highlight Mrs. Sudha Murthy's biography, work, publications, and philanthropic efforts.
+
 Video Section: Includes a video section that showcases interviews, speeches, or documentaries related to Mrs. Sudha Murthy’s life and work.
+
 Styling: CSS is utilized to create an elegant design that complements the theme of respect and inspiration.
 
 Technologies Used
 -------------------
 HTML: Used for structuring the webpage content.
+
 CSS: Used for styling and layout adjustments to make the page visually attractive.
