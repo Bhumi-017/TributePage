@@ -10,14 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Tribute Page</title>
+    <script src="script.js"></script>
+
 </head>
 <body>
-    <header style="position:fixed; top:0px; right:0px; background-color:black; width: 100%;">
-        <div class="Title" style="background-color: black;">
+    <header style="position:fixed; top:0; right:0; background: var(--second-bg-color); width: 100%; display:flex; justify-content:space-between; align-items:center; padding:20px; z-index:1000;">
+        <div class="Title" style="background-color: var(--second-bg-color);">
             <a href="#home"><span>.Tribute </span>Page</a>
         </div>
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav id="navbar" style="position:fixed; top:0px; right:0px; width: 100%; padding:20px;">
+
+        <div id="menu-icon">☰</div>
+
+        <nav id="navbar">
             <ul id="navcontent">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#timeline">Timeline</a></li>
@@ -26,6 +30,7 @@
             </ul>
         </nav>
     </header>
+
 
     <section class="home" id="home">
         <div class="home-content">
@@ -36,8 +41,8 @@
                 Her work continues to inspire and uplift communities worldwide.  
             </p>
             <div class="social-icons">
-                <a href="https://www.bing.com/ck/a?!&&p=9988938c762644b2JmltdHM9MTcyNzMwODgwMCZpZ3VpZD0xMjY3YTBjYy1mOWZiLTZkZDYtMzAyYy1iNDBlZjg4NDZjMzYmaW5zaWQ9NTIwNw&ptn=3&ver=2&hsh=3&fclid=1267a0cc-f9fb-6dd6-302c-b40ef8846c36&psq=sudha+murthy+instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdWRoYV9tdXJ0aHlfb2ZmaWNpYWwv&ntb=1" class="fa fa-instagram"></a>
-                <a href="https://www.bing.com/ck/a?!&&p=4f7b757a80f43bf6JmltdHM9MTcyNzMwODgwMCZpZ3VpZD0xMjY3YTBjYy1mOWZiLTZkZDYtMzAyYy1iNDBlZjg4NDZjMzYmaW5zaWQ9NTI3Mw&ptn=3&ver=2&hsh=3&fclid=1267a0cc-f9fb-6dd6-302c-b40ef8846c36&psq=sudha+murthy+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3N1ZGhhbXVydGh5cGFnZS8&ntb=1" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/smtsudhamurty/" class="fa fa-instagram"></a>
+                <a href="https://www.facebook.com/sudhamurthypage/" class="fa fa-facebook"></a>
             </div>
         </div>
             <div class="home-image">
@@ -179,7 +184,7 @@
                 </div>
             </div>
         </div>
-        <button class="learn-more" style="position: relative; z-index: 1;">
+        <button class="learn-more" style="position: relative;">
             <a href="https://en.wikipedia.org/wiki/Sudha_Murty">learn more</a>
         </button>
     </section>
@@ -199,4 +204,27 @@
           </div>
     </section>
 </body>
+<script>
+    const menuIcon = document.querySelector("#menu-icon");
+    const navbar = document.querySelector("#navbar");
+    const navLinks = document.querySelectorAll("#navbar a");
+
+    menuIcon.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+           
+            navLinks.forEach(l => l.classList.remove("active"));
+
+            link.classList.add("active");
+
+            navbar.classList.remove("active");
+        });
+    });
+</script>
+
+
+
 </html>
