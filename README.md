@@ -18,3 +18,7 @@ Technologies Used
 HTML: Used for structuring the webpage content.
 
 CSS: Used for styling and layout adjustments to make the page visually attractive.
+
+Deployed At
+-------------------
+https://tribute-page-iota-pink.vercel.app/
